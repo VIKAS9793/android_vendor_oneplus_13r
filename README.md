@@ -26,19 +26,44 @@ This repository contains proprietary vendor blobs and configurations for the One
 ./device/oneplus/13r/extract-files.sh
 ```
 
-## Building
+## Building LineageOS
 
-1. Add this repository to your LineageOS build:
+1. Initialize your build environment:
+```bash
+source build/envsetup.sh
+```
+
+2. Add this repository to your LineageOS build:
 ```bash
 git clone https://github.com/VIKAS9793/android_vendor_oneplus_13r.git -b lineage-21.0 vendor/oneplus/13r
 ```
 
-2. Build the ROM:
+3. Select the device:
 ```bash
-source build/envsetup.sh
 lunch lineage_13r-userdebug
+```
+
+4. Build the ROM:
+```bash
 m bacon
 ```
+
+## Device Tree Structure
+
+```
+android_vendor_oneplus_13r/
+├── 13r-vendor.mk           # Device-specific vendor configurations
+├── Android.mk              # Makefile for building vendor blobs
+├── BoardConfigVendor.mk    # Vendor-specific board configurations
+└── README.md               # This file
+```
+
+## Dependencies
+
+- LineageOS 21.0 source code
+- Android 15.0 platform
+- Qualcomm Snapdragon 8 Gen 3 BSP
+- OnePlus 13R kernel source
 
 ## Copyright
 
@@ -48,4 +73,15 @@ m bacon
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-``` 
+```
+
+## Contributing
+
+1. Fork this repository
+2. Create a new branch for your changes
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details. 
