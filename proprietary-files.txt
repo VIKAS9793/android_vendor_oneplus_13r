@@ -1,0 +1,50 @@
+# Audio
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+
+# Camera
+vendor/lib64/camera/components/com.qti.node.watermark.so
+vendor/lib64/camera/components/com.qti.stats.aec.so
+vendor/lib64/camera/components/com.qti.stats.af.so
+vendor/lib64/camera/components/com.qti.stats.afd.so
+vendor/lib64/camera/components/com.qti.stats.awb.so
+vendor/lib64/camera/components/com.qti.stats.haf.so
+vendor/lib64/camera/components/com.qti.stats.pdlib.so
+vendor/lib64/camera/com.qti.sensor.imx766.so
+vendor/lib64/camera/com.qti.sensormodule.oplus.imx766.bin
+
+# Display
+vendor/lib64/hw/gralloc.kalama.so
+vendor/lib64/hw/hwcomposer.kalama.so
+vendor/lib64/hw/memtrack.kalama.so
+
+# Fingerprint
+vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
+
+# Graphics
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libgsl.so
+
+# Sensors
+vendor/lib64/hw/sensors.kalama.so
+vendor/lib64/libsensorcal.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
+
+# WiFi
+vendor/lib64/libwifi-hal-ctrl.so
+vendor/lib64/libwifi-hal-qcom.so
+vendor/lib64/libwifi-hal.so 

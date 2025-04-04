@@ -115,7 +115,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/fstab.qcom
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2024-02-01
+VENDOR_SECURITY_PATCH := 2024-04-01
 
 # LineageOS specific flags
 TARGET_BOOT_ANIMATION_RES := 1440
@@ -125,4 +125,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm 
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+
+# VNDK
+BOARD_VNDK_VERSION := current
+
+# Proprietary blobs
+TARGET_VENDOR_PROP += $(VENDOR_PATH)/vendor.prop 

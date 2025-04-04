@@ -1,30 +1,65 @@
 # OnePlus 13R Vendor Tree
 
-This repository contains proprietary vendor blobs and configurations for the OnePlus 13R (kalama).
+This repository contains the vendor tree for the OnePlus 13R, optimized for LineageOS compatibility.
 
-## Device Specifications
+## Device specifications
 
-| Feature                 | Specification                                                                                                                                                                                      |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CPU                     | Qualcomm® Kryo™ 980 CPU @3.3GHz                                                                                                                                                                    |
-| Chipset                 | Snapdragon® 8 Gen 3 Mobile Platform                                                                                                                                                                |
-| GPU                     | Adreno™ 750 @903MHz                                                                                                                                                                                |
-| Memory                  | 12GB/16GB LPDDR5X                                                                                                                                                                                  |
-| Shipped Android Version | OxygenOS 15.0 based on Android™ 15                                                                                                                                                                 |
-| Storage                 | 256GB/512GB UFS 4.0                                                                                                                                                                                |
-| Battery                 | 6,000 mAh (single-cell, non-removable)                                                                                                                                                             |
-| Display                 | 17.22 cm (6.78 inches), 2780×1264 pixels, 450 ppi, 120Hz ProXDR Display with LTPO 4.1, HBM/Peak Brightness: 1600 nits/4500 nits, 100% Display P3, 10-bit Color Depth, Corning® Gorilla® Glass GG7i |
-| Camera (Rear)           | 50 MP (wide), Sony LYT-700, 1/1.56", f/1.8, OIS, 50 MP (telephoto), 2X optical zoom, f/2.0, 8 MP (ultrawide), f/2.2, 112° FOV                                                                      |
-| Camera (Front)          | 16 MP (wide), 1/3.09", f/2.4, 82° FOV                                                                                                                                                              |
-| Charging                | 80W SUPERVOOC™                                                                                                                                                                                     |
+| Feature                 | Specification                     |
+| :---------------------- | :-------------------------------- |
+| CPU                     | Octa-core (1x3.3 GHz Cortex-X4 & 5x3.2 GHz Cortex-A720 & 2x2.3 GHz Cortex-A520) |
+| Chipset                 | Qualcomm SM8650 (Snapdragon 8 Gen 3) |
+| GPU                     | Adreno 750 |
+| Memory                  | 8/12/16 GB |
+| Shipped Android Version | 14.0.0 |
+| Storage                | 128/256/512 GB |
+| Battery                | 5500 mAh |
+| Display                | 6.78 inches, 1264 x 2780 pixels, AMOLED, 120Hz |
+| Camera (Rear)          | 50 MP (f/1.8, 1/1.56", 1.0µm) + 8 MP (f/2.2, 1/4", 1.12µm) + 2 MP (f/2.4) |
+| Camera (Front)         | 16 MP (f/2.4, 1/3.06", 1.0µm) |
+| Sensors                | Fingerprint (under display, optical), accelerometer, gyro, proximity, compass |
 
-## Extracting Proprietary Blobs
+## Copyright
 
-1. Connect your device in recovery mode
-2. Run the extraction script:
-```bash
-./device/oneplus/13r/extract-files.sh
 ```
+#
+# Copyright (C) 2024 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```
+
+## Proprietary Files
+
+This repository contains proprietary files required for the OnePlus 13R device. These files are extracted from the stock ROM and are necessary for the device to function properly.
+
+## Dependencies
+
+- [android_device_oneplus_13r](https://github.com/your-github-username/android_device_oneplus_13r)
+- [android_device_oneplus_sm8650-common](https://github.com/your-github-username/android_device_oneplus_sm8650-common)
+- [android_kernel_oneplus_13r](https://github.com/your-github-username/android_kernel_oneplus_13r)
+
+## How to extract blobs
+
+```bash
+# Clone the repository
+git clone https://github.com/your-github-username/android_vendor_oneplus_13r.git
+
+# Navigate to the repository
+cd android_vendor_oneplus_13r
+
+# Extract blobs from a device running the same Android version
+./extract-files.sh
+```
+
+## Included blobs
+
+- Audio HAL
+- Camera HAL
+- Display HAL
+- Fingerprint HAL
+- Graphics HAL
+- Sensors HAL
+- WiFi HAL
 
 ## Building LineageOS
 
@@ -56,23 +91,6 @@ android_vendor_oneplus_13r/
 ├── Android.mk              # Makefile for building vendor blobs
 ├── BoardConfigVendor.mk    # Vendor-specific board configurations
 └── README.md               # This file
-```
-
-## Dependencies
-
-- LineageOS 21.0 source code
-- Android 15.0 platform
-- Qualcomm Snapdragon 8 Gen 3 BSP
-- OnePlus 13R kernel source
-
-## Copyright
-
-```
-#
-# Copyright (C) 2024 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
 ```
 
 ## Contributing
