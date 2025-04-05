@@ -6,7 +6,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, vendor/oneplus/13r/13r-vendor-blobs.mk)
 
-# Inherit from kalama device
+# Inherit from sm8650 device
 $(call inherit-product, device/oneplus/13r/device.mk)
 
 # Inherit from common lineage configuration
@@ -16,7 +16,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DEVICE := 13r
 PRODUCT_NAME := lineage_13r
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := OnePlus 13R
+PRODUCT_MODEL := CPH2691
 PRODUCT_MANUFACTURER := OnePlus
 
 # LineageOS specific flags
@@ -28,67 +28,41 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Device specific properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.model=Snapdragon8Gen3 \
+    ro.soc.model=SM8650 \
     ro.soc.manufacturer=Qualcomm \
-    ro.hardware=kalama \
-    ro.product.first_api_level=34
+    ro.hardware=sm8650 \
+    ro.product.first_api_level=34 \
+    ro.vendor.build.security_patch=2025-03-01 \
+    ro.build.version.release=15 \
+    ro.build.version.release_or_codename=15 \
+    ro.build.version.sdk=35
 
 # Camera HAL
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.8-impl \
+    android.hardware.camera.provider@2.8-service \
     vendor.qti.hardware.camera.postproc@1.0-service
 
 # Audio HAL
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl \
+    android.hardware.audio@7.1-impl \
     android.hardware.audio.service \
-    android.hardware.audio.effect@7.0-impl
+    android.hardware.audio.effect@7.1-impl
 
 # Display HAL
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.composer@2.6-service \
     android.hardware.graphics.allocator@4.0-service \
     android.hardware.graphics.mapper@4.0-impl-qti-display
 
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.4.vendor
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
-
-# Build info
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="OnePlus13R-user 15.0.0.0 RKQ1.201217.002 eng.root.20240201.000000 release-keys"
-
-BUILD_FINGERPRINT := OnePlus/OnePlus13R/OnePlus13R:15.0.0.0/RKQ1.201217.002/root02201000:user/release-keys
-
-# Security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.version.security_patch=2024-02-01
-
-# Enable dynamic partition
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := true
-PRODUCT_BUILD_PRODUCT_IMAGE := true
-PRODUCT_BUILD_SYSTEM_EXT_IMAGE := true
-PRODUCT_BUILD_VENDOR_IMAGE := true
-PRODUCT_BUILD_ODM_IMAGE := true
-PRODUCT_BUILD_VENDOR_DLKM_IMAGE := true
-
-# Inherit from kalama vendor
-$(call inherit-product, vendor/oneplus/13r/13r-vendor.mk)
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.primary.kalama \
+    android.hardware.thermal@2.0-service.qti \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -97,7 +71,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.kalama \
+    camera.sm8650 \
     libcamera_metadata_shim \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
@@ -105,12 +79,12 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.kalama \
-    hwcomposer.kalama \
+    gralloc.sm8650 \
+    hwcomposer.sm8650 \
     libdisplayconfig.qti \
     libqdMetaData \
     libtinyxml \
-    memtrack.kalama
+    memtrack.sm8650
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -136,8 +110,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.2-impl \
+    android.hardware.health@2.2-service
 
 # Media
 PRODUCT_PACKAGES += \
@@ -185,7 +159,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.6-service \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \

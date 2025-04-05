@@ -1,23 +1,32 @@
 # Copyright (C) 2024 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/13r
 
-# Prebuilt vendor files
+# Prebuilt vendor resources
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/oneplus/13r/proprietary/vendor,$(TARGET_COPY_OUT_VENDOR))
+    vendor/oneplus/13r/proprietary/vendor/firmware/a740_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_zap.b01 \
+    vendor/oneplus/13r/proprietary/vendor/firmware/a740_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_zap.elf \
+    vendor/oneplus/13r/proprietary/vendor/firmware/a740_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_zap.mdt
 
 # Properties
--include vendor/oneplus/13r/vendor.prop 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2025-03-01 \
+    ro.vendor.product.cpu.abilist=arm64-v8a \
+    ro.vendor.product.cpu.abilist32= \
+    ro.vendor.product.cpu.abilist64=arm64-v8a \
+    vendor.product.device=13r \
+    vendor.product.manufacturer=OnePlus \
+    vendor.product.model=CPH2691 \
+    vendor.product.name=13r
+
+# Platform
+TARGET_BOARD_PLATFORM := sm8650
+
+# Architecture
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv9-a
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_VARIANT := kryo-v2 
