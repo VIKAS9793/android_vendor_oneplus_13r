@@ -1,0 +1,5 @@
+<refresh_rates>
+  <mode name="auto" min="1" max="120"/>
+  <mode name="high" fixed="120"/>
+  <mode name="standard" fixed="60"/>
+</refresh_rates>

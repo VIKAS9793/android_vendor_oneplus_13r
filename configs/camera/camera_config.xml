@@ -1,0 +1,6 @@
+<CameraConfiguration>
+    <Modules>
+        <Module name="RearMain" sensor="imx789"/>
+        <Module name="RearUltraWide" sensor="imx766"/>
+    </Modules>
+</CameraConfiguration>

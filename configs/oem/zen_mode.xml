@@ -1,0 +1,4 @@
+<zen_mode>
+  <durations>20min,40min,60min</durations>
+  <whitelist>emergency_calls,alarm</whitelist>
+</zen_mode>

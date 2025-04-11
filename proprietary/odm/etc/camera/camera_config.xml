@@ -1,0 +1,8 @@
+<!-- OnePlus 13R camera configuration -->
+<CameraConfiguration>
+    <Module>
+        <Sensor name="imx789" facing="back" />
+        <Sensor name="imx766" facing="back" />
+        <Sensor name="imx615" facing="front" />
+    </Module>
+</CameraConfiguration>

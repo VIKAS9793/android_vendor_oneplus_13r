@@ -1,0 +1,4 @@
+<gaming>
+  <touch_sample_rate>1000Hz</touch_sample_rate>
+  <gpu_boost level="aggressive"/>
+</gaming>

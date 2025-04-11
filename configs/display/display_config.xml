@@ -1,0 +1,4 @@
+<DisplayConfiguration>
+    <Feature name="FOSS" enable="true"/>
+    <Feature name="QCOM_ADRENO" enable="true"/>
+</DisplayConfiguration>

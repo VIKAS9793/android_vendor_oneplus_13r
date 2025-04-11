@@ -1,0 +1,5 @@
+<dax>
+  <profile name="Movie" mode="movie"/>
+  <profile name="Music" mode="music"/>
+  <profile name="Game" mode="game"/>
+</dax>

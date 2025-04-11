@@ -1,0 +1,5 @@
+<features>
+  <shelf integration="true"/>
+  <reading_mode levels="10"/>
+  <gaming_mode triggers="performance,notification_block"/>
+</features>

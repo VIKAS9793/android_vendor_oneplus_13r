@@ -1,0 +1,26 @@
+// OnePlus 13R vendor blobs
+cc_prebuilt_library_shared {
+    name: "vulkan.adreno",
+    vendor: true,
+    owner: "qcom",
+    srcs: ["vendor_hal/vulkan.adreno.so"],
+    compile_multilib: "64",
+    target: {
+        android_arm64: {
+            srcs: ["vendor_hal/vulkan.adreno.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.mapper@4.0-impl-qti-display",
+    vendor: true,
+    owner: "qcom",
+    srcs: ["vendor_hal/android.hardware.graphics.mapper@4.0-impl-qti-display.so"],
+    compile_multilib: "64",
+    target: {
+        android_arm64: {
+            srcs: ["vendor_hal/android.hardware.graphics.mapper@4.0-impl-qti-display.so"],
+        },
+    },
+}

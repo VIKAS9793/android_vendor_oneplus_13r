@@ -1,0 +1,5 @@
+<always_on>
+  <styles>minimal,informative,artistic</styles>
+  <schedule>sunset-to-sunrise</schedule>
+  <brightness>adaptive</brightness>
+</always_on>

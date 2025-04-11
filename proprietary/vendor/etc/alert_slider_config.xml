@@ -1,0 +1,5 @@
+<alertslider>
+  <position name="top">ring</position>
+  <position name="middle">vibrate</position>
+  <position name="bottom">silent</position>
+</alertslider>

@@ -1,0 +1,10 @@
+<profiles>
+  <profile name="Performance">
+    <item>CPU.MAX=100%</item>
+    <item>GPU.MAX=100%</item>
+  </profile>
+  <profile name="Battery">
+    <item>CPU.MAX=70%</item>
+    <item>GPU.MAX=50%</item>
+  </profile>
+</profiles>

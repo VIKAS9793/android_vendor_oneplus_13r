@@ -1,0 +1,4 @@
+<features>
+  <pro_mode support="true"/>
+  <video_8k support="true" bitrate="100Mbps"/>
+</features>
